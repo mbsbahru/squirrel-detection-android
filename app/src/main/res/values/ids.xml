@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="checkbox_led_1" type="id" />
+    <item name="read_buffer" type="id" />
+    <item name="bluetooth_status" type="id" />
+    <item name="scan" type="id" />
+    <item name="paired_btn" type="id" />
+    <item name="discover" type="id" />
+    <item name="devices_list_view" type="id" />
+    <item name="off" type="id" />
+    <item name="etTo" type="id" />
+</resources>
