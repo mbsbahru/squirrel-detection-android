@@ -4,7 +4,7 @@ This project was developed during the CEE575 - Sensors, Data, and Smart Systems 
 
 ## Descriptions, Features, and Notes
 
-- Inspired by [matteomedioli's AndroidObjectDetection project](https://github.com/matteomedioli/AndroidObjectDetection/tree/master).
+- Inspired by [matteomedioli's AndroidObjectDetection](https://github.com/matteomedioli/AndroidObjectDetection/tree/master) project.
 - The dataset consists of 1,810 squirrel images obtained from [Google APIs](https://storage.googleapis.com/openimages/web/index.html) and can be accessed [here](https://drive.google.com/drive/folders/1cCxD1ne8TSRU_cIFztHMSvqJe8tCXZYy).
 - A Google Drive containing the project for training and testing the dataset is [available here](https://drive.google.com/drive/folders/1ubJGx2rCKnVPiIUr1tKKaj6m0wJ7Uh23?usp=sharing).
 - The training and testing process is documented in a Jupyter notebook file, which can be found [here](https://drive.google.com/file/d/1olUG9i1oi2OnLeqqDCqGzXb3OvzfGdRJ/view?usp=sharing).
@@ -80,12 +80,22 @@ To install the app easily, follow these steps:
 
 ## How to Use the App
 
-You can see the demonstration in [this video](https://drive.google.com/file/d/1zEdJWV1k0I3CAFBL1L8PJxqurIfKoDfc/view?usp=sharing).
+For a visual demonstration, check out [this video](https://drive.google.com/file/d/1zEdJWV1k0I3CAFBL1L8PJxqurIfKoDfc/view?usp=sharing).
 
-1. **Bluetooth Interface**  
-   The Bluetooth interface allows the app to establish a connection with external devices, enabling data transfer and alert notifications. 
+1. **Bluetooth and Email Interface**  
+   - Start by pairing the Bluetooth module (HC-05) in your Android settings.
+   - Once the app is opened, the interface will prompt you to establish a connection with external devices, allowing for data transfer and alert notifications.
+   - Enter the email address to which you want detected squirrel images to be sent.
+   - You can choose between two modes:
+     - **Full Functionality**: [*Squirrel Detection With BT*] This mode enables squirrel detection using Bluetooth, which activates a buzzer and triggers alert notifications to a Google Spreadsheet.
+     - **Email-Only Mode**: [*Squirrel Detection Only (W/O BT)*] This mode allows for squirrel image detection and sending alerts via email without Bluetooth functionality.
+
+   ![Bluetooth and Email Input Interface](figures/bt-email_input_interface.jpeg)
 
 2. **Main Activity**  
-   The main activity serves as the primary user interface, displaying the squirrel detection results and enabling users to interact with the application.
+   The main activity acts as the core user interface, showcasing squirrel detection results and facilitating the sending of detected squirrel images via email. Images will be sent after the camera detects 50 frames containing a squirrel (this frame counter can be adjusted in the code [here](https://github.com/mbsbahru/squirrel-detection-android/blob/b01d084df21e7170d04963896f2907f11b0c3c76/app/src/main/java/com/mbsbahru/team24/MainActivity.java#L320)).
+
+   ![Main Activity](figures/squirrel-detection.jpeg)
+
 
 Thank you!
