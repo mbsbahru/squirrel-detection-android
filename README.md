@@ -1,6 +1,13 @@
 # Android Squirrel Image Detection and Alert
 
-This project was developed during the CEE575 - Sensors, Data, and Smart Systems course as a self-directed project by *Team: Muhammad Bahru Sholahuddin and Sion Stefano Pizzi*. The application implements YOLO (You Only Look Once) for squirrel detection, with Bluetooth connectivity to send alerts.
+This project was developed during the CEE575 - Sensors, Data, and Smart Systems course as a self-directed project. The application implements YOLO (You Only Look Once) for squirrel detection, with Bluetooth connectivity to send alerts.
+
+- **Team**: Muhammad Bahru Sholahuddin and Sion Stefano Pizzi
+- **Introduction**: This project started as a solution to monitor backyard squirrels, aiming to detect and capture real-time wildlife activities using machine learning and computer vision. Inspired by frequent yet elusive squirrel appearances, the system is designed to identify squirrels using the YOLO object detection algorithm and alert users via a mobile application. Potential applications include wildlife monitoring, urban planning, and ecological research.
+- **Challenges and Technical Highlights**: A key challenge was balancing detection speed with accuracy. We initially trained the YOLO model with a 416x416 filter size, which delivered high accuracy but incurred significant computational costs. To optimize performance, we reduced the filter size to 96x96, speeding up evaluations but sacrificing some detection precision. Despite these trade-offs, our system effectively recognizes squirrels with a good balance between speed and accuracy.
+- **Evaluation**: The Android application detects squirrels, sends alerts via Bluetooth and email, and tracks X-Y positions in a Google Spreadsheet. While detection accuracy decreases at distances beyond 3-5 meters (due to filter resolution limitations), the system works reliably for closer-range detection, fulfilling its intended purpose.
+
+![Squirrel Detection Diagram](https://github.com/mbsbahru/squirrel-detection-android/blob/main/figures/CEE575_Android-Squirrel-Detection.png)
 
 ## Descriptions, Features, and Notes
 
@@ -9,10 +16,7 @@ This project was developed during the CEE575 - Sensors, Data, and Smart Systems 
 - A Google Drive containing the project for training and testing the dataset is [available here](https://drive.google.com/drive/folders/1ubJGx2rCKnVPiIUr1tKKaj6m0wJ7Uh23?usp=sharing).
 - The training and testing process is documented in a Jupyter notebook file, which can be found [here](https://drive.google.com/file/d/1olUG9i1oi2OnLeqqDCqGzXb3OvzfGdRJ/view?usp=sharing).
 - You can find the trained model's `.weights` data [here](https://drive.google.com/drive/folders/1Uldc-ucCDkC-4_5Gg3mxYE1WWziDdcQd?usp=sharing) and the configuration `.cfg` files [here](https://drive.google.com/drive/folders/1LZfTID4Hw1cUR6bS0MXiKCF8eKkB5259?usp=sharing).
-- The application integrates email, Bluetooth, and IFTTT IoT services to send alerts to the Sparkfun Photon RedBoard microcontroller via a Bluetooth module using UART. The microcontroller code is written in the [Particle Web IDE](https://build.particle.io/) and can be viewed [here](https://drive.google.com/file/d/1-0iOiCAIiK7cVbWnRKW6E6bXcnsTDLaQ/view?usp=sharing).
-- The system diagram can be viewed below:
-  
-  ![Squirrel Detection Diagram](https://github.com/mbsbahru/squirrel-detection-android/blob/main/figures/CEE575_Android-Squirrel-Detection.png)
+- The application integrates email, Bluetooth, and IFTTT IoT services to send alerts to the Sparkfun Photon RedBoard microcontroller via a Bluetooth module using UART. The microcontroller code is written in the [Particle Web IDE](https://build.particle.io/) and can be viewed [here](https://drive.google.com/file/d/1-0iOiCAIiK7cVbWnRKW6E6bXcnsTDLaQ/view?usp=sharing).  
 
 ## Project Structure
 
